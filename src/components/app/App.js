@@ -5,12 +5,10 @@ import CharInfo from '../charInfo/CharInfo';
 import CharList from '../charList/CharList';
 import ErrorBoundary from "../errorBoundary/ErrorBoundary";
 
-import decoration from '../../resources/image/UW.png';
-
 class App extends Component {
     
     state = {
-        selectedChar: null
+        selectedChar: null,
     }
 
     onCharSelected = (id) => {
@@ -35,7 +33,6 @@ class App extends Component {
                             <CharInfo charId={this.state.selectedChar}/>
                         </ErrorBoundary>
                     </div>
-                    <img className="bg-decoration" src={decoration} alt="vision"/>
                 </main>
             </div>
         )

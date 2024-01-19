@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import MarvelService from '../services/MarvelService';
 import './charList.scss';
 import Spinner from '../spinner/Spinner';
@@ -16,7 +16,7 @@ class CharList extends Component {
         offset: 210,
         charEnded: false
     }
-    
+
     marvelService = new MarvelService();
 
     componentDidMount() {
@@ -58,18 +58,38 @@ class CharList extends Component {
         })
     }
 
+    arrayRef = []
+
+    setRef = (ref) => {
+        this.arrayRef.push(ref)
+    }
+
+    focusRef = (id) => {
+        this.arrayRef.forEach(item => item.classList.remove('char__item_selected'))
+        this.arrayRef[id].classList.add('char__item_selected')
+        this.arrayRef[id].focus()
+    }
+
     renderItems(arr) {
-        const items =  arr.map((item) => {
+        const items =  arr.map((item, i) => {
             let imgStyle = {'objectFit' : 'cover'};
             if (item.thumbnail === 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg') {
                 imgStyle = {'objectFit' : 'unset'};
             }
-            
             return (
                 <li 
                     className="char__item"
+                    tabIndex={2}
                     key={item.id}
-                    onClick={() => this.props.onCharSelected(item.id)}>
+                    ref={this.setRef}
+                    onClick={() => { this.props.onCharSelected(item.id)
+                                     this.focusRef(i)}}
+                    onKeyPress={(e) => {
+                        if(e.key === ' ' || e.key === 'Enter') {
+                            this.props.onCharSelected(item.id)
+                            this.focusRef(i)
+                        }
+                    }}>
                         <img src={item.thumbnail} alt={item.name} style={imgStyle}/>
                         <div className="char__name">{item.name}</div>
                 </li>
