@@ -36,13 +36,13 @@ const ComicsList = (props) => {
     }
 
     function renderItems(arr) {
-        const items =  arr.map((item) => {
+        const items =  arr.map((item, i) => {
             let imgStyle = {'objectFit' : 'cover'};
             if (item.thumbnail === 'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg') {
                 imgStyle = {'objectFit' : 'unset'};
             }
             return (
-                <li className="comics__item" key={item.id}>
+                <li className="comics__item" key={i}>
                     <a href={item.url}>
                         <img src={item.thumbnail} alt={item.title} className="comics__item-img" />
                         <div className="comics__item-name">{item.title}</div>

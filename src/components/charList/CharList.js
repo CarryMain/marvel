@@ -38,6 +38,8 @@ const CharList = (props) => {
         setCharEnded(charEnded => ended)
     }
 
+    console.log('render')
+
     const arrayRef = useRef([])
     const focusRef = (id) => {
         arrayRef.current.forEach(item => item.classList.remove('char__item_selected'))
