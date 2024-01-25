@@ -3,7 +3,6 @@ import RandomChar from "../randomChar/RandomChar";
 import CharInfo from '../charInfo/CharInfo';
 import CharList from '../charList/CharList';
 import ErrorBoundary from "../errorBoundary/ErrorBoundary";
-import decoration from '../../resources/image/abyss.jpg';
 
 
 const MainPage = () => {
