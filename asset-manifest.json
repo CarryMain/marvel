@@ -1,15 +1,32 @@
 {
   "files": {
-    "main.css": "/marvel/static/css/main.83a375e3.css",
-    "main.js": "/marvel/static/js/main.899465f5.js",
+    "main.css": "/marvel/static/css/main.a8776716.css",
+    "main.js": "/marvel/static/js/main.8d580509.js",
+    "static/js/20.f80422e5.chunk.js": "/marvel/static/js/20.f80422e5.chunk.js",
+    "static/css/862.4941199e.chunk.css": "/marvel/static/css/862.4941199e.chunk.css",
+    "static/js/862.e33348c0.chunk.js": "/marvel/static/js/862.e33348c0.chunk.js",
+    "static/css/83.bf062a7c.chunk.css": "/marvel/static/css/83.bf062a7c.chunk.css",
+    "static/js/83.e50cafd6.chunk.js": "/marvel/static/js/83.e50cafd6.chunk.js",
+    "static/css/3.b2417554.chunk.css": "/marvel/static/css/3.b2417554.chunk.css",
+    "static/js/3.2b91e77b.chunk.js": "/marvel/static/js/3.2b91e77b.chunk.js",
     "static/media/error.gif": "/marvel/static/media/error.ef1f48e3b7570c2737d0.gif",
+    "static/media/x-men.png": "/marvel/static/media/x-men.41b39e1944f148b7a123.png",
     "static/media/mjolnir.png": "/marvel/static/media/mjolnir.61f31e1809f12183a524.png",
+    "static/media/Avengers.png": "/marvel/static/media/Avengers.4065c8f9c94e3d8b039a.png",
+    "static/media/Avengers_logo.png": "/marvel/static/media/Avengers_logo.9eaf219344d83362e830.png",
     "index.html": "/marvel/index.html",
-    "main.83a375e3.css.map": "/marvel/static/css/main.83a375e3.css.map",
-    "main.899465f5.js.map": "/marvel/static/js/main.899465f5.js.map"
+    "main.a8776716.css.map": "/marvel/static/css/main.a8776716.css.map",
+    "main.8d580509.js.map": "/marvel/static/js/main.8d580509.js.map",
+    "20.f80422e5.chunk.js.map": "/marvel/static/js/20.f80422e5.chunk.js.map",
+    "862.4941199e.chunk.css.map": "/marvel/static/css/862.4941199e.chunk.css.map",
+    "862.e33348c0.chunk.js.map": "/marvel/static/js/862.e33348c0.chunk.js.map",
+    "83.bf062a7c.chunk.css.map": "/marvel/static/css/83.bf062a7c.chunk.css.map",
+    "83.e50cafd6.chunk.js.map": "/marvel/static/js/83.e50cafd6.chunk.js.map",
+    "3.b2417554.chunk.css.map": "/marvel/static/css/3.b2417554.chunk.css.map",
+    "3.2b91e77b.chunk.js.map": "/marvel/static/js/3.2b91e77b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.83a375e3.css",
-    "static/js/main.899465f5.js"
+    "static/css/main.a8776716.css",
+    "static/js/main.8d580509.js"
   ]
 }
