@@ -3,6 +3,7 @@ import RandomChar from "../randomChar/RandomChar";
 import CharInfo from '../charInfo/CharInfo';
 import CharList from '../charList/CharList';
 import ErrorBoundary from "../errorBoundary/ErrorBoundary";
+import SearchPanel from '../searchPanel/SearchPanel';
 
 
 const MainPage = () => {
@@ -22,10 +23,16 @@ const MainPage = () => {
                 <ErrorBoundary>
                     <CharList onCharSelected={onCharSelected}/>
                 </ErrorBoundary>
+                <div>
                 <ErrorBoundary>
                     <CharInfo charId={selectedChar}/>
                 </ErrorBoundary>
+                <ErrorBoundary>
+                    <SearchPanel/>
+                </ErrorBoundary>
             </div> 
+            </div>
+            
         </>
     )
 }

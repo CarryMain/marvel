@@ -9,6 +9,8 @@ const MainPage = lazy(() => import('../pages/MainPage'))
 const ComicsPage = lazy(() => import('../pages/ComicsPage'))
 const SingleComicPage = lazy(() => import('../pages/SingleComicPage'))
 const Page404 = lazy(() => import('../pages/404'))
+const SingleCharacterPage = lazy(() => import ('../pages/SingleCharacterPage'))
+const SinglePage = lazy(() => import('../pages/SinglePage'))
 
 
 
@@ -23,7 +25,8 @@ const App = () => {
                         <Routes>
                             <Route path="/" element={<MainPage/>}/>
                             <Route path="/comics" element={<ComicsPage/>}/>
-                            <Route path="/comics/:comicId" element={<SingleComicPage/>}/>
+                            <Route path="/comics/:comicId" element={<SinglePage Component={SingleComicPage} dataType="comic"/>}/>
+                            <Route path="/character/:id" element={<SinglePage Component={SingleCharacterPage} dataType="character"/>}/>
                             <Route path="*" element={<Page404/>}/>
                         </Routes>
                     </Suspense>
