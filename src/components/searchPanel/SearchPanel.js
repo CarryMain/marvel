@@ -1,10 +1,12 @@
-import './searchPanel.scss';
-import {Formik, Form, Field, ErrorMessage as FormikErrorMessage} from 'formik';
+import {useState} from 'react';
+import { Formik, Form, Field, ErrorMessage as FormikErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { useState } from 'react';
 import {Link} from 'react-router-dom';
+
 import useMarvelService from '../services/MarvelService';
 import ErrorMessage from '../errorMessage/ErrorMessage';
+
+import './searchPanel.scss';
 
 const SearchPanel = () => {
     const [char, setChar] = useState(null);
@@ -70,4 +72,4 @@ const SearchPanel = () => {
     )
 }
 
-export default SearchPanel
+export default SearchPanel;

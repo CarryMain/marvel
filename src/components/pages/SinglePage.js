@@ -7,34 +7,35 @@ import AppBanner from '../appBanner/AppBanner'
 
 
 const SinglePage = ({Component, dataType}) => {
-    const {id} = useParams()
-    const [data, setData] = useState(null)
-    const {loading, error, getComic, getCharacter, clearError} = useMarvelService()
+    const {id} = useParams();
+    const [data, setData] = useState(null);
+    const {loading, error, getComic, getCharacter, clearError} = useMarvelService();
 
     useEffect(() => {
         updateData()
     }, [id])
 
     const updateData = () => {
-        clearError()
-        switch(dataType) {
-            case 'comic': 
-                getComic(id).then(onDataLoaded)
+        clearError();
+
+        switch (dataType) {
+            case 'comic':
+                getComic(id).then(onDataLoaded);
                 break;
-            case 'character': 
-                getCharacter(id).then(onDataLoaded)
+            case 'character':
+                getCharacter(id).then(onDataLoaded);
         }
     }
 
     const onDataLoaded = (data) => {
-        setData(data)
+        setData(data);
     }
 
-    const errorMessage = error ? <ErrorMessage/> : null 
-    const spinner = loading ? <Spinner/> : null 
-    const content = !(loading || error || !data) ? <Component data={data}/> : null 
+    const errorMessage = error ? <ErrorMessage/> : null;
+    const spinner = loading ? <Spinner/> : null;
+    const content = !(loading || error || !data) ? <Component data={data}/> : null;
 
-    return ( 
+    return (
         <>
             <AppBanner/>
             {errorMessage}
@@ -44,4 +45,4 @@ const SinglePage = ({Component, dataType}) => {
     )
 }
 
-export default SinglePage
+export default SinglePage;
