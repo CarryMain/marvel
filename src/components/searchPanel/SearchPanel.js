@@ -8,9 +8,9 @@ import ErrorMessage from '../errorMessage/ErrorMessage';
 
 import './searchPanel.scss';
 
-const SearchPanel = () => {
+const CharSearchForm = () => {
     const [char, setChar] = useState(null);
-    const {loading, error, getCharacterName, clearError} = useMarvelService();
+    const {loading, error, getCharacterByName, clearError} = useMarvelService();
 
     const onCharLoaded = (char) => {
         setChar(char);
@@ -19,7 +19,7 @@ const SearchPanel = () => {
     const updateChar = (name) => {
         clearError();
 
-        getCharacterName(name)
+        getCharacterByName(name)
             .then(onCharLoaded);
     }
 
@@ -72,4 +72,4 @@ const SearchPanel = () => {
     )
 }
 
-export default SearchPanel;
+export default CharSearchForm;
